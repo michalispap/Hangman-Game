@@ -1,7 +1,11 @@
 import random
 
-f = open('wordlist.txt', 'r')
+import pyglet
 
+music = pyglet.resource.media('OldTownRoad.mp3')
+music.play()
+
+f = open('wordlist.txt', 'r')
 words = f.readlines()
 
 english_alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
@@ -142,3 +146,5 @@ def hangman():
         return True
 
 play()
+
+pyglet.app.run()
